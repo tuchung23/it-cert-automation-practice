@@ -1,0 +1,18 @@
+name: Self-Hosted Runner Workflow
+
+on:
+  schedule:
+    # This cron expression runs the workflow every 10 minutes
+    - cron: "*/10 * * * *"
+
+jobs:
+  create-file:
+    runs-on: self-hosted
+    # Specify the labels for the runner
+    labels:
+      - macos
+      - arm
+    steps:
+      - name: Create tutu.txt file
+        run: |
+          echo "This is a file created by GitHub Actions" > tutu.txt

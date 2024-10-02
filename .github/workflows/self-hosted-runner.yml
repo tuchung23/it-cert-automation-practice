@@ -3,7 +3,7 @@ name: Self-Hosted Runner Workflow
 on:
   schedule:
     # This cron expression runs the workflow every 10 minutes
-    - cron: "*/10 * * * *"
+    - cron: "*/60 * * * *"
 
 jobs:
   create-file:

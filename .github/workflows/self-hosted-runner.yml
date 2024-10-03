@@ -3,9 +3,10 @@ name: Self-Hosted Runner Workflow
 on:
   # allow a manual run 
   workflow_dispatch:
-  schedule:
+  # scheduling if required
+  #schedule:
     # This cron expression runs the workflow every 10 minutes
-    - cron: "*/60 * * * *"
+  #  - cron: "*/60 * * * *"
 
 jobs:
   create-file:
